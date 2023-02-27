@@ -9,7 +9,6 @@ class Category(models.Model):
     cat_image = models.ImageField(upload_to='photos/categories', blank=True)
 
     class Meta:
-        # fixes the spelling error on the admin site
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
