@@ -81,6 +81,8 @@ def cart(request, cart_items=None, total=0, quantity=0):
     Get all cart items in a cart, as well as the total price and quanity of items in the cart
     """
     try:
+        tax = 0
+        grand_total = 0
         # get the cart using the session id as cart id
         cart = Cart.objects.get(cart_id=_cart_id(request))
         # get the cart items in the cart
